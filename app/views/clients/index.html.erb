@@ -3,7 +3,7 @@
 <div id="clients">
   <% @clients.each do |client| %>
     <div>
-      <%= client.name %>
+      <%= link_to client.name, client %>
     </div>
   <% end %>
 </div>
