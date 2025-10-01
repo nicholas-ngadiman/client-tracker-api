@@ -1,6 +1,9 @@
 <main class="container">
     <%= link_to sanitize("&larr; Back to clients"), clients_path %>
+
     <div class="header">
-        <h1><%= @client.name %></h1>
+        <h1>New client</h1>
     </div>
+
+    <%= render "form", client: @client %>
 </main>

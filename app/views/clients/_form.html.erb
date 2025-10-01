@@ -1,0 +1,14 @@
+<%= form_with model: client, html: { class: "client form" } do |f| %>
+    <% if client.errors.any? %>
+        <div class="error-message">
+            <%= client.errors.full_messages.to_sentence.capitalize %>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true %>
+    </div>
+
+    <%= f.submit "Save", class: "btn btn--secondary" %>
+<% end %>

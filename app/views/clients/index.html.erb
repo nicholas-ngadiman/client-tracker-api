@@ -1,9 +1,8 @@
-<h1>Clients</h1>
+<main class="container">
+  <div class="header">
+    <h1>Clients</h1>
+    <%= link_to "New client", new_client_path, class: "btn btn--primary" %>
+  </div>
 
-<div id="clients">
-  <% @clients.each do |client| %>
-    <div>
-      <%= link_to client.name, client %>
-    </div>
-  <% end %>
-</div>
+  <%= render @clients %>
+</main>

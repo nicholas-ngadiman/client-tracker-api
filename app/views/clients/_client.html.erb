@@ -1,0 +1,13 @@
+<div class="client">
+    <%= link_to client.name, client_path(client) %>
+    <div class="client_actions">
+        <%= button_to "Delete",
+                        client_path(client),
+                        method: :delete,
+                        data: { turbo_confirm: "Are you sure?" },
+                        class: "btn btn--light" %>
+        <%= link_to "Edit",
+                    edit_client_path(client),
+                    class: "btn btn--light" %>
+    </div>
+</div>
