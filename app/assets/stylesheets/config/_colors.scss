@@ -1,0 +1,12 @@
+$colors: (
+    light: (bg: #ffffff,
+        primary: #2563eb,
+        secondary: #6b7280),
+    dark: (bg: #111827,
+        primary: #3b82f6,
+        secondary: #9ca3af)
+);
+
+@function color($key, $theme: light) {
+    @return map-get(map-get($colors, $theme), $key);
+}

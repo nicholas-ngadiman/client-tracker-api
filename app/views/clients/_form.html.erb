@@ -1,14 +1,16 @@
-<%= form_with model: client, html: { class: "client form" } do |f| %>
+<%= form_with model: client, html: { class: "client-form" } do |f| %>
     <% if client.errors.any? %>
-        <div class="error-message">
+        <div class="alert">
             <%= client.errors.full_messages.to_sentence.capitalize %>
         </div>
     <% end %>
 
-    <div class="field">
+    <div class="form-field">
         <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true %>
+        <%= f.text_field :name, autofocus: true, class: "input-text" %>
     </div>
 
-    <%= f.submit "Save", class: "btn btn--secondary" %>
+    <div class="form-actions">
+        <%= f.submit "Save", class: "btn btn-primary" %>
+    </div>
 <% end %>

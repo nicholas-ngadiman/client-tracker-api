@@ -1,9 +1,9 @@
 <main class="container">
-    <%= link_to sanitize("&larr; Back to clients"), clients_path %>
+    <%= link_to "&larr; Back to clients".html_safe, clients_path, class: "back-link" %>
 
-    <div class="header">
-        <h1>New client</h1>
-    </div>
+    <header class="page-header">
+        <h1><%= action_name.capitalize %></h1>
+    </header>
 
     <%= render "form", client: @client %>
 </main>

@@ -12,9 +12,9 @@ class ClientsController < ApplicationController
   end
 
   def create
-    @Client = Client.new(client_params)
-    if @Client.save
-      redirect_to @Client, notice: "Client was successfully created."
+    @client = Client.new(client_params)
+    if @client.save
+      redirect_to @client, notice: "Client was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class ClientsController < ApplicationController
 
   def destroy
     @client.destroy
-    redirect_to clients_url, notice: "Client was successfully destroyed."
+    redirect_to clients_path, notice: "Client was successfully destroyed."
   end
 
   private

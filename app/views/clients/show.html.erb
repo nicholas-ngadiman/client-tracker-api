@@ -1,6 +1,7 @@
 <main class="container">
-    <%= link_to sanitize("&larr; Back to clients"), clients_path %>
-    <div class="header">
+    <%= link_to "&larr; Back to clients".html_safe, clients_path, class: "back-link" %>
+
+    <header class="page-header">
         <h1><%= @client.name %></h1>
-    </div>
+    </header>
 </main>
