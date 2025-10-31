@@ -1,8 +1,8 @@
 <div class="client-card">
-    <h2><%= link_to client.name, client_path(client), class: "client-link" %></h2>
+    <h2><%= link_to client.name, client_path(client) %></h2>
     <div class="actions">
-        <%= link_to "Edit", edit_client_path(client), class: "btn btn-secondary" %>
+        <%= button_to "Edit", edit_client_path(client) %>
         <%= button_to "Delete", client_path(client), method: :delete,
-            data: { turbo_confirm: "Are you sure?" }, class: "btn btn-primary" %>
+            data: { turbo_confirm: "Are you sure?" } %>
     </div>
 </div>
